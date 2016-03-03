@@ -29,10 +29,6 @@ def add_winner(request):
         responce = HttpResponse("Wrong side")
         responce.status_code = 400
         return responce
-    if Wins.objects.filter(name=event_name).count() > 0:
-        responce = HttpResponse("Event winner had already been added", status_code=400)
-        responce.status_code = 400
-        return responce
     else:
         event = Event.objects.get_or_create(name=event_name, defaults={"name": event_name})
         team, exists = Team.objects.get_or_create(side=side, defaults={"side": side})
