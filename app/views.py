@@ -30,7 +30,7 @@ def add_winner(request):
         responce.status_code = 400
         return responce
     else:
-        event = Event.objects.get_or_create(name=event_name, defaults={"name": event_name})
+        event, exists = Event.objects.get_or_create(name=event_name, defaults={"name": event_name})
         team, exists = Team.objects.get_or_create(side=side, defaults={"side": side})
         Wins.objects.create(event=event, team=team)
         responce = HttpResponse()
