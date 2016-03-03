@@ -126,8 +126,8 @@ a {
   max-width: 500px;
   height: 182px;
   background: url("../img/whatside.svg") no-repeat 50%/100%;
-  font-size: 0;
-  color: transparent; }
+  color: transparent;
+  font-size: 0; }
   .force__slogan::before, .force__slogan::after {
     position: absolute;
     top: 90px;
@@ -142,6 +142,7 @@ a {
     left: 100%; }
 
 .force__side {
+  position: relative;
   flex: 1 1 250px; }
 
 .force__logo {
@@ -164,7 +165,71 @@ a {
     margin: 0 0 0 auto; }
   .force__side._dark .force__count {
     margin: 0 auto 0 0; }
-  .force__count._win {
-    color: red; }
+
+.force__button {
+  position: absolute;
+  top: 30px;
+  z-index: 10;
+  width: 120px;
+  height: 120px;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 90px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  user-select: none; }
+  .force__side._light .force__button {
+    right: 230px; }
+  .force__side._dark .force__button {
+    left: 230px; }
+  .force__button:hover {
+    color: red;
+    border-color: red; }
+
+.force__rate-number {
+  position: absolute;
+  top: 30px;
+  z-index: 10;
+  display: none;
+  width: 120px;
+  height: 120px;
+  font-size: 90px;
+  font-weight: bold;
+  text-align: center; }
+  .force__side._light .force__rate-number {
+    right: 230px; }
+  .force__side._dark .force__rate-number {
+    left: 230px; }
+
+/* Settings */
+.settings {
+  padding: 50px 0 0;
+  text-align: center; }
+
+.settings__rate {
+  display: none;
+  margin: 0 auto;
+  width: 550px;
+  height: 80px;
+  background-color: gray;
+  font-size: 50px; }
+
+/* Competitions */
+.competitions {
+  text-align: center;
+  font-size: 40px; }
+
+.competitions__item {
+  margin-bottom: 50px; }
 
 /*# sourceMappingURL=style.css.map */

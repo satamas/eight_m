@@ -4,7 +4,7 @@ module.exports = {
   //entry: "./app/static/js/index.entry.js",
   entry: {
     'index': './app/static/js/index.entry.js',
-    'admin': './app/static/js/admin.entry.js'
+    'admin': './app/static/js/event.entry.js'
   },
   output: {
     path: __dirname,

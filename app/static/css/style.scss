@@ -4,9 +4,11 @@
 /* Logo */
 .logo {
   overflow: hidden;
+
   margin: 0 auto;
   width: 333px;
   height: 167px;
+
   background: url("../img/logo.svg") no-repeat 0 0;
   text-indent: -9999px;
 }
@@ -28,25 +30,31 @@
   position: relative;
   overflow: hidden;
   flex: 0 1 20px;
+
   padding: 0 2%;
 }
 
 .force__slogan {
   position: relative;
+
   margin: 0 auto;
   max-width: 500px;
   height: 182px;
+
   background: url("../img/whatside.svg") no-repeat 50%/100%;
-  font-size: 0;
   color: transparent;
+
+  font-size: 0;
 
   &::before,
   &::after {
     position: absolute;
     top: 90px;
     z-index: -1;
+
     width: 300%;
     height: 1px;
+
     background: #fff;
     content: '';
   }
@@ -59,6 +67,7 @@
 }
 
 .force__side {
+  position: relative;
   flex: 1 1 250px;
 }
 
@@ -75,9 +84,11 @@
     background: url("../img/force-dark.svg") no-repeat 0 0;
   }
 }
+
 .force__count {
   padding-top: 20px;
   width: 182px;
+
   font-size: 80px;
   font-weight: bold;
   text-align: center;
@@ -88,8 +99,90 @@
   .force__side._dark & {
     margin: 0 auto 0 0;
   }
+}
 
-  &._win {
+.force__button {
+  position: absolute;
+  top: 30px;
+  z-index: 10;
+
+  width: 120px;
+  height: 120px;
+
+  border: 10px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+
+  font-size: 90px;
+  font-weight: bold;
+  text-align: center;
+
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;
+
+  .force__side._light & {
+    right: 230px;
+  }
+  .force__side._dark & {
+    left: 230px;
+  }
+
+  &:hover {
     color: red;
+    border-color: red;
   }
 }
+
+.force__rate-number {
+  position: absolute;
+  top: 30px;
+  z-index: 10;
+  display: none;
+
+  width: 120px;
+  height: 120px;
+
+  font-size: 90px;
+  font-weight: bold;
+  text-align: center;
+
+  .force__side._light & {
+    right: 230px;
+  }
+  .force__side._dark & {
+    left: 230px;
+  }
+}
+
+/* Settings */
+.settings {
+  padding: 50px 0 0;
+  text-align: center;
+}
+
+.settings__rate {
+  display: none;
+
+  margin: 0 auto;
+  width: 550px;
+  height: 80px;
+
+  background-color: gray;
+
+  font-size: 50px;
+}
+
+/* Competitions */
+.competitions {
+  text-align: center;
+  font-size: 40px;
+}
+.competitions__item {
+  margin-bottom: 50px;
+}
+.competitions__link {}

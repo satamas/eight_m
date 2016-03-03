@@ -24,5 +24,6 @@ urlpatterns = [
     url('stats', get_statistic),
     url('winner', add_winner),
     url('jetmen', TemplateView.as_view(template_name="admin.html")),
+    url('starmarch', TemplateView.as_view(template_name="adminEvent.html")),
     url('^$', TemplateView.as_view(template_name="index.html")),
 ]

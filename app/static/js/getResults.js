@@ -7,11 +7,11 @@ function getResultsAndUpdate () {
 
     var counters = {
         light: {
-            el: $('#light-counter'),
+            el: $('#counter-light'),
             result: 0
         },
         dark: {
-            el: $('#dark-counter'),
+            el: $('#counter-dark'),
             result: 0
         }
     };
