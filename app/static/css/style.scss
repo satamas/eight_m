@@ -44,7 +44,7 @@ a {
   z-index: -2;
   margin: 0 auto;
   width: 75%;
-  background: url("../images/bg-gradient.svg") repeat-y 0/100%;
+  background: url("../img/bg-gradient.svg") repeat-y 0/100%;
   animation: pulse 1.2s infinite;
 }
 
@@ -66,7 +66,7 @@ a {
   margin: 0 auto;
   width: 333px;
   height: 167px;
-  background: url("../images/logo.svg") no-repeat 0 0;
+  background: url("../img/logo.svg") no-repeat 0 0;
   text-indent: -9999px;
 }
 
@@ -87,7 +87,7 @@ a {
   margin: 0 auto;
   max-width: 500px;
   height: 182px;
-  background: url("../images/whatside.svg") no-repeat 50%/100%;
+  background: url("../img/whatside.svg") no-repeat 50%/100%;
   font-size: 0;
   color: transparent;
 
@@ -119,11 +119,11 @@ a {
 
   .force__side._light & {
     margin: 0 0 0 auto;
-    background: url("../images/force-light.svg") no-repeat 0 0;
+    background: url("../img/force-light.svg") no-repeat 0 0;
   }
   .force__side._dark & {
     margin: 0 auto 0 0;
-    background: url("../images/force-dark.svg") no-repeat 0 0;
+    background: url("../img/force-dark.svg") no-repeat 0 0;
   }
 }
 .force__count {
