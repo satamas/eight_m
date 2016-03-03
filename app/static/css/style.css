@@ -56,7 +56,6 @@ body {
 a {
   color: #00B7FF; }
 
-/* Layout */
 .layout {
   overflow: hidden;
   position: relative;
@@ -113,6 +112,12 @@ a {
   position: relative;
   overflow: hidden;
   flex: 4 0 35%;
+  padding: 0 2%; }
+
+.force__spacer {
+  position: relative;
+  overflow: hidden;
+  flex: 0 1 20px;
   padding: 0 2%; }
 
 .force__slogan {

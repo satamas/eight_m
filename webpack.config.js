@@ -1,10 +1,14 @@
 var path = require('path');
 
 module.exports = {
-  entry: "./app/static/js/index.entry.js",
+  //entry: "./app/static/js/index.entry.js",
+  entry: {
+    'index': './app/static/js/index.entry.js',
+    'admin': './app/static/js/admin.entry.js'
+  },
   output: {
     path: __dirname,
-    filename: "./app/static/assets/index.js"
+    filename: './app/static/assets/[name].js'
   },
   module: {
     loaders: [

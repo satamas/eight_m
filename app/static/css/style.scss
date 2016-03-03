@@ -1,65 +1,5 @@
 @import "reset";
-
-html, body {
-  height: 100%;
-}
-
-body {
-  background: #000;
-  color: #fff;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF
-}
-
-/* Layout */
-.layout {
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  min-width: 650px;
-  min-height: 100%;
-}
-.layout__top {
-  display: flex;
-  flex: 1 1 180px;
-  align-items: center;
-  justify-content: center;
-
-  padding-bottom: 50px;
-}
-.layout__bottom {
-  flex: 4 1 0;
-}
-.layout__bg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -2;
-  margin: 0 auto;
-  width: 75%;
-  background: url("../img/bg-gradient.svg") repeat-y 0/100%;
-  animation: pulse 1.8s infinite;
-  transition: transform 0.5s;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+@import "layout";
 
 /* Logo */
 .logo {
@@ -76,10 +16,18 @@ a {
   display: flex;
   flex-direction: row;
 }
+
 .force__middle {
   position: relative;
   overflow: hidden;
   flex: 4 0 35%;
+  padding: 0 2%;
+}
+
+.force__spacer {
+  position: relative;
+  overflow: hidden;
+  flex: 0 1 20px;
   padding: 0 2%;
 }
 
