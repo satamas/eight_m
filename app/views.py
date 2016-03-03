@@ -26,9 +26,13 @@ def add_winner(request):
     event_name = request.GET['eventName']
     side = request.GET['side']
     if side != 'dark' and side != 'light':
-        return HttpResponse("Wrong side", status_code=400)
+        responce = HttpResponse("Wrong side")
+        responce.status_code = 400
+        return responce
     if Wins.objects.filter(name=event_name).count() > 0:
-        return HttpResponse("Event winner had already been added", status_code=400)
+        responce = HttpResponse("Event winner had already been added", status_code=400)
+        responce.status_code = 400
+        return responce
     else:
         team, exists = Team.objects.get_or_create(side=side, defaults={"side": side})
         Wins.objects.create(name=event_name, team=team)
