@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 # from django.contrib import admin
+from django.views.generic.base import TemplateView
+
 from app.views import *
 
 urlpatterns = [
     url('stats', get_statistic),
-    url('winner', add_winner)
+    url('winner', add_winner),
+    url('^$', TemplateView.as_view(template_name="index.html")),
 ]
