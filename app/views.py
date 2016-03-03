@@ -12,8 +12,8 @@ def get_statistic(request):
     light_wins = Wins.objects.filter(team__side='light')
 
     response_body = {
-        "dark": [win.name for win in dark_wins],
-        "light": [win.name for win in light_wins]
+        "dark": [win.event.name for win in dark_wins],
+        "light": [win.event.name for win in light_wins]
     }
 
     return HttpResponse(
