@@ -27,7 +27,7 @@ function initEvent (event) {
     forceButtons.on('click', function(e) {
         var button = $(this);
         var side = button.attr('data-side');
-        var rateBlock =forceRate.filter("[data-side='" + side + "']");
+        var rateBlock = forceRate.filter("[data-side='" + side + "']");
         var value = rateInput.val() || EVENTS[event];
 
         button.hide();
