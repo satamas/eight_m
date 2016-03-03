@@ -14,7 +14,11 @@ class Team(models.Model):
     side = models.CharField(max_length=1, choices=sides)
 
 
-class Wins(models.Model):
+class Event(models.Model):
     name = models.CharField(max_length=500)
-    timestamp = models.DateTimeField(default=datetime.now())
+
+
+class Wins(models.Model):
     team = models.ForeignKey(Team)
+    timestamp = models.DateTimeField(default=datetime.now())
+    event = models.ForeignKey(Event)

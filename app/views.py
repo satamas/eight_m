@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-from app.models import Wins, Team
+from app.models import Wins, Team, Event
 
 
 def get_statistic(request):
@@ -34,8 +34,9 @@ def add_winner(request):
         responce.status_code = 400
         return responce
     else:
+        event = Event.objects.get_or_create(name=event_name, defaults={"name": event_name})
         team, exists = Team.objects.get_or_create(side=side, defaults={"side": side})
-        Wins.objects.create(name=event_name, team=team)
+        Wins.objects.create(event=event, team=team)
         responce = HttpResponse()
         responce.status_code = 200
         return responce
