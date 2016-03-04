@@ -22,3 +22,4 @@ class Wins(models.Model):
     team = models.ForeignKey(Team)
     timestamp = models.DateTimeField(default=datetime.now())
     event = models.ForeignKey(Event)
+    rate = models.IntegerField(null=True, default=None)
