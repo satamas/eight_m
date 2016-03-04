@@ -28,7 +28,8 @@ function initEvent (event) {
         var button = $(this);
         var side = button.attr('data-side');
         var rateBlock = forceRate.filter("[data-side='" + side + "']");
-        var value = rateInput.val() || EVENTS[event];
+        var customRate = rateInput.val();
+        var value = customRate || EVENTS[event];
 
         button.hide();
         rateBlock.show().html(value);
@@ -36,7 +37,7 @@ function initEvent (event) {
         $.ajax({
           type: "GET",
           url: API.set,
-          data: "side=" + side + "&eventName=" + event,
+          data: "side=" + side + "&eventName=" + event + (customRate ? "&rate=" + customRate : ""),
           success: function (message) {
               setTimeout(function() {
                   button.show();

@@ -31,7 +31,7 @@ function getResultsAndUpdate () {
 
                 // set result values for counters
                 while (i--) {
-                    counters[side].result += EVENTS[events[i]];
+                    counters[side].result += events[i].rate || EVENTS[events[i].event];
                 }
 
                 // rendering results to counters
